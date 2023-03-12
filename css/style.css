@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 110vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* Animacao do fundo */
+body {
+    width: 100%;
+    background-image: linear-gradient(to right, #010025, #61004c);
+    background-size: 500% 100%;
+    animation-name: background;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@keyframes background {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+/* cabecalho */
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(48 ,46 153, 0.55);
+}
+
+/* div do header */
+.menu-content {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+}
+
+.logo {
+    font-size: 26px;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+.menu-content .list-itens {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+
+/* Mexendo no input */
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: white;
+    padding:14px;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+/* Animacao do input */
+.menu-content .list-itens a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: all 1.5s ease;
+}
+
+.menu-content .list-itens a:hover:before {
+    width: 100%;
+}
+
+
+
+/* centro - Conteudo principal da page */
+
+main {
+    height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-card {
+    display: block;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 40px;
+    width: 510px;
+    height: 570px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    overflow:hidden;
+    overflow-x: hidden;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1.2s ease;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+} 
+
+.thefront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #0b0f21;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.thefront > h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    flex-direction: column;
+}
+
+
+.theback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #0b0f21;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(20, 0, 89);
+    border-radius:10px;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background: #010025;
+    border-radius: 10px;
+} 
+
+/* Estilizacao do profile */
+.img-profile {
+    width: 505px;
+    height: 182px;
+    margin: 0;
+    
+}
+.img-profile > img {
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 175px;
+    margin-top: 20px;
+    border: 1px solid white;
+}
+
+
+/* Nome embaixo da foto */
+.img-profile > span {
+    font-size: 1.70rem;
+    font-family: 'lato' sans-serif;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-left: 170px;
+    letter-spacing: 1.5px;
+}
+
+
+/* Texto de descricao minha */
+.text-description .text {
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-top: 20px;
+    font-size: 1.40rem;
+    text-indent: 15px;
+    letter-spacing: 1.2px;
+}
+
+
+
+/* footer e rodape */
+
+footer {
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(1, 0, 0, 0.24);
+}
+
+.footer-content {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: 80px;
+}
+
+.footer-content .list-itenss {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+
+/* Mexendo no a */
+.footer-content .list-itenss a {
+    text-decoration: none;
+    color: white;
+    padding:14px;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+
+
+
+
+
